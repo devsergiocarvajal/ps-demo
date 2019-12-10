@@ -1,11 +1,12 @@
 <div class="container">
     <h2>User Settings</h2>
 
-    <form #form="ngForm">
+    <form #form="ngForm" ngNativeValidate>
 
         <div class="form-group">
             <label for="name"></label>
-            <input id="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="userSettings.name"/>
+            <input id="name" name="name" class="form-control" placeholder="Name" [(ngModel)]="userSettings.name"
+                required pattern="B.*" minlength="5" maxlength="300"/>
         </div>
 
         <div class="form-check form-group">
