@@ -15,6 +15,30 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="text"
+                placeholder="Start Date"
+                class="form-control"
+                [(ngModel)]="startDate" name="startDate" id="startDate"
+                bsDatepicker>
+        </div>
+
+        Start Date : {{ startDate }}
+
+        <div class="form-group">
+            <label for="startRangeDate">Start Range Date</label>
+            <input type="text"
+                placeholder="Start Range Date"
+                class="form-control"
+                [(ngModel)]="startRangeDate" name="startRangeDate" id="startRangeDate"
+                bsDaterangepicker>
+        </div>
+
+        Start Date : {{ startRangeDate }}
+
+        <br/>
+
         <button type="button" class="btn btn-primary" name="singleModel"
             [(ngModel)]="singleModel" btnCheckbox
             btnCheckboxTrue="On" btnCheckboxFalse="Off">
