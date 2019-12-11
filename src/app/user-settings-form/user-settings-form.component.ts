@@ -26,6 +26,9 @@ export class UserSettingsFormComponent implements OnInit {
   postError = false;
   postErrorMessage = '';
   subscriptionTypes: Observable<string[]>;
+  maxRating: number;
+  userRating: number;
+  isReadonly: boolean;
 
   singleModel = "On";
 
@@ -38,6 +41,8 @@ export class UserSettingsFormComponent implements OnInit {
     this.startDate = new Date();
     this.startRangeDate = new Date();
     this.timepickerDate = new Date();
+    this.maxRating = 10;
+    this.isReadonly = false;
   }
 
   onBlur(field: NgModel) {
