@@ -21,6 +21,7 @@ export class UserSettingsFormComponent implements OnInit {
 
   startDate: Date;
   startRangeDate: Date;
+  timepickerDate: Date;
   userSettings : UserSettings = { ...this.originalUserSettings };
   postError = false;
   postErrorMessage = '';
@@ -36,6 +37,7 @@ export class UserSettingsFormComponent implements OnInit {
     this.subscriptionTypes = this.dataService.getSubscriptionTypes();
     this.startDate = new Date();
     this.startRangeDate = new Date();
+    this.timepickerDate = new Date();
   }
 
   onBlur(field: NgModel) {
